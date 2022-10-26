@@ -13,6 +13,7 @@ import {
 } from "@mui/material";
 
 const SignUp = () => {
+  // eslint-disable-next-line
   const auth = getAuth(app);
 
   const [email, setEmail] = useState();
@@ -27,6 +28,7 @@ const SignUp = () => {
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in
+        // eslint-disable-next-line
         const user = userCredential.user;
         navigate(SIGNINROUTE);
         // ...
@@ -34,6 +36,7 @@ const SignUp = () => {
 
       .catch((error) => {
         const errorCode = error.code;
+        // eslint-disable-next-line
         const errorMessage = error.message;
         alert(errorCode);
         // ..

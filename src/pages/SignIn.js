@@ -25,6 +25,7 @@ const SignIn = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in
+        // eslint-disable-next-line
         const user = userCredential.user;
         navigate(LOGGEDINROUTE);
       })
